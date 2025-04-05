@@ -1,0 +1,80 @@
+:root {
+    --main-bg-color: #fefff2; /* Light yellow background color */
+    --linear-gradient: #bca28d; /* Gradient pattern */
+    --linear-gradient-2: #d0bbab; /* Lighter gradient color */
+    --linear-gradient-3: #f8e9c5; /* Even lighter gradient color */
+    --small-text-color: #755217;   /* Dark text color for contrast */
+    --title-text-color: #cf8732; /* Title text color */
+    --hovered-text-color: #ed8813; /* Hovered text color */
+    --main-font-family: Arial, sans-serif; /* Font family */
+    --main-font-size: 16px;    /* Base font size */
+    --footer-font-family: "Smooch Sans", sans-serif;
+}
+
+body {
+  background-image: url(/MyBG/how-to-start-a-skincare-line-glow-oasis.jpg);
+  height: 100vh; /* Full viewport height */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  background-attachment: relative; /* Fix the background image during scroll */
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size); /* Set the base font size */
+  color: var(--small-text-color); /* Set the text color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-size: 30px;
+}
+.container a {
+  color: var(--title-text-color);
+  font-size: 20px;
+  text-decoration: none;
+  background-color: rgba(202, 149, 50, 0.361);
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+.container a:hover {
+  background-color: var(--hovered-text-color);
+  color: rgb(255, 255, 255);
+  transform: scale(1.05); /* Slightly enlarge the link on hover */
+  transition: background-color 1s, color 1s, transform 1s; /* Smooth transition for hover effects */
+}
+.container h1 {
+  font-size: 50px; /* Set the font size for the heading */
+  color: var(--title-text-color); /* Set the heading text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow effect to the heading text */
+}
+.container p {
+  font-size: 20px; /* Set the font size for the paragraph */
+  color: var(--small-text-color); /* Set the paragraph text color */
+  margin: 10px 0; /* Add some margin around the paragraph */
+  text-shadow: 2px 1px 2px rgb(249, 200, 121);
+}
+
+/* --responsive-- */
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-size: 20px;
+  }
+  .container h1 {
+    font-size: 40px;
+  }
+  .container p {
+    font-size: 15px;
+  }
+}

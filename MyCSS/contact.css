@@ -1,0 +1,150 @@
+:root {
+    --main-bg-color: #fefff2; /* Light yellow background color */
+    --linear-gradient: #bca28d; /* Gradient pattern */
+    --linear-gradient-2: #d0bbab; /* Lighter gradient color */
+    --linear-gradient-3: #f8e9c5; /* Even lighter gradient color */
+    --small-text-color: #755217;   /* Dark text color for contrast */
+    --title-text-color: #cf8732; /* Title text color */
+    --hovered-text-color: #ed8813; /* Hovered text color */
+    --main-font-family: Arial, sans-serif; /* Font family */
+    --main-font-size: 16px;    /* Base font size */
+    --footer-font-family: "Smooch Sans", sans-serif;
+}
+body {
+  background-color: var(--main-bg-color);
+  background-attachment: relative; /* Fix the background image during scroll */
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size); /* Set the base font size */
+  color: var(--small-text-color); /* Set the text color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow-x: hidden;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 135vh;
+  text-align: center;
+  font-size: 30px;
+  overflow-x: hidden;
+}
+.container p {
+  font-size: 20px; /* Set the font size for the paragraph */
+  color: var(--small-text-color); /* Set the paragraph text color */
+  margin: 10px 0; /* Add some margin around the paragraph */
+  text-shadow: 2px 1px 6px rgba(255, 255, 255, 0.347);
+}
+.title {
+    color: var(--title-text-color);
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    translate: -50%;
+}
+/* ---contact--- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-size: 30px;
+    overflow-x: hidden;
+}
+.contact-form  > input {
+    font-family: var(--main-font-family); /* Set the font family for input fields */
+    font-size: 25px; /* Set the font size for input fields */
+    color: var(--small-text-color); /* Set the text color for input fields */
+    margin: 10px 0; /* Add some margin around input fields */
+    padding: 10px; /* Add padding inside input fields */
+    border-radius: 5px; /* Round the corners of input fields */
+    border: 1px solid var(--small-text-color); /* Set border color for input fields */
+    width: 300px; /* Set a fixed width for input fields */
+}
+.contact-form  > input::placeholder {
+    color: var(--small-text-color); /* Set placeholder text color */
+    opacity: 0.7; /* Set opacity for placeholder text */
+}
+.contact-form > textarea {
+    font-family: var(--main-font-family); /* Set the font family for textarea */
+    font-size: 25px; /* Set the font size for textarea */
+    color: var(--small-text-color); /* Set the text color for textarea */
+    margin: 10px 0; /* Add some margin around textarea */
+    padding: 10px; /* Add padding inside textarea */
+    border-radius: 5px; /* Round the corners of textarea */
+    border: 1px solid var(--small-text-color); /* Set border color for textarea */
+    width: 300px; /* Set a fixed width for textarea */
+}
+.contact-form > textarea::placeholder {
+    color: var(--small-text-color); /* Set placeholder text color for textarea */
+    opacity: 0.7; /* Set opacity for placeholder text in textarea */
+}
+.contact-form > textarea:hover {
+    border-color: var(--hovered-text-color); /* Change border color on hover */
+    box-shadow: 0 0 5px var(--hovered-text-color); /* Add shadow effect on hover */
+}
+.contact-form  > input:hover {
+    border-color: var(--hovered-text-color); /* Change border color on hover */
+    box-shadow: 0 0 5px var(--hovered-text-color); /* Add shadow effect on hover */
+}
+.contact-form  > input:focus {
+    outline: none; /* Remove default outline on focus */
+    border-color: var(--hovered-text-color); /* Change border color on focus */
+    box-shadow: 0 0 5px var(--hovered-text-color); /* Add shadow effect on focus */
+}
+.contact-form  > button {
+    font-family: var(--main-font-family); /* Set the font family for buttons */
+    font-size: 25px; /* Set the font size for buttons */
+    color: #fff; /* Set text color for buttons */
+    background-color: rgb(255, 166, 0); /* Set background color for buttons */
+    padding: 10px 20px; /* Add padding inside buttons */
+    border-radius: 5px; /* Round the corners of buttons */
+    border: none; /* Remove default border from buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    position: absolute;
+    top: 90%; /* Position the button at the bottom of the form */
+    left: 50%; /* Center the button horizontally */
+    translate: -50%; /* Center the button horizontally */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    width: 100px;
+}
+.contact-form  > button:hover {
+    background-color: var(--hovered-text-color); /* Change background color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+.contact-form  > button:active {
+    transform: scale(0.95); /* Slightly shrink the button on click */
+}
+/* ---social media--- */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add some space above the social media icons */
+}
+.social-media a {
+    margin: 0 10px; /* Add some space between social media icons */
+    color: var(--small-text-color); /* Set the text color for social media icons */
+    font-size: 30px; /* Set the font size for social media icons */
+    transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effects */
+} 
+.social-media a:hover {
+    color: var(--hovered-text-color); /* Change text color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+.social-media a:active {
+    transform: scale(0.9); /* Slightly shrink the icon on click */
+}
+.social-media > a > img {
+    width: 50px; /* Set the width for social media icons */
+    height: 50px; /* Set the height for social media icons */
+    filter: drop-shadow(0 0 5px var(--small-text-color)); /* Add shadow effect to icons */
+    transition: filter 0.3s; /* Smooth transition for shadow effect */
+}
+.pin {
+    width: 60px;
+}

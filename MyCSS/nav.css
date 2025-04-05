@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kenia&family=Smooch+Sans:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
+
+:root {
+    --main-bg-color: #fefff2; /* Light yellow background color */
+    --linear-gradient: #bca28d; /* Gradient pattern */
+    --linear-gradient-2: #d0bbab; /* Lighter gradient color */
+    --linear-gradient-3: #f8e9c5; /* Even lighter gradient color */
+    --small-text-color: #755217;   /* Dark text color for contrast */
+    --title-text-color: #cf8732; /* Title text color */
+    --hovered-text-color: #ed8813; /* Hovered text color */
+    --main-font-family: "Kenia", sans-serif; /* Font family */
+    --main-font-size: 16px;    /* Base font size */
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-image: url(/MyBG/how-to-start-a-skincare-line-glow-oasis.jpg);
+    background-size: cover; /* Cover the entire viewport */ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    height: 13vh;
+    width: 100%;
+    position: absolute;
+}
+nav ul {
+    list-style-type: none; /* Remove default list style */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    padding-top: 15px;
+    
+}
+.nav-links a{
+    text-decoration: none; /* Remove underline from links */
+    color: var(--main-bg-color); /* Set the text color */
+    font-size: 30px; /* Set the font size */
+    padding:10px 20px; /* Add padding around the links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    border-radius: 5px; /* Rounded corners for the links */
+    margin: 5px; /* Add some space between links */
+}
+nav ul li:hover a {
+    color: var(--hovered-text-color); /* Change text color on hover */
+    font-size: xx-large;
+    transform: scale(5);
+}
+nav ul li a.active {
+    color: var(--hovered-text-color); /* Active link text color */
+    transform: scale(1.05); /* Slightly enlarge the active link */
+}
+.logo > a > img{
+    width: 170px;
+    position: absolute;
+    top: -10px;
+    left: 70px; 
+}
+.search-bar {
+    position: absolute;
+    top: 35px; /* Position the search bar at the top */
+    right: 150px;
+}
+.search-bar input[type="text"] {
+    padding: 5px; /* Add padding to the input field */
+    border: 1px solid var(--small-text-color); /* Border color */
+    background-color: rgba(228, 223, 223, 0.031);
+    filter: blur(0.5px); /* Slight blur effect */
+    color: whitesmoke;
+    border-radius: 10px; /* Rounded corners for the input field */
+    font-size: 16px; /* Font size for the input field */
+    width: 200px; /* Width of the input field */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+.search-bar input[type="text"]:focus {
+    border-color: var(--hovered-text-color); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+/* hover search bar */
+.search-bar input[type="text"]:hover {
+    border-color: var(--hovered-text-color); /* Change border color on hover */
+    background-color: rgba(228, 223, 223, 0.1); /* Change background color on hover */
+    filter: blur(0px); /* Remove blur effect on hover */
+}
+.cart-icon {
+    position: absolute;
+    top: 30px; /* Position the cart icon at the top */
+    right: 90px; /* Position it to the right */
+    font-size: 30px; /* Font size for the cart icon */
+    color: var(--small-text-color); /* Set the cart icon color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+.cart-icon:hover {
+    color: var(--hovered-text-color); /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    filter: brightness(1.5); /* Increase brightness of the icon on hover */
+}
+button svg {
+    width: 30px; /* Set the width of the SVG icon */
+    height: 30px; /* Set the height of the SVG icon */
+    fill: var(--small-text-color); /* Set the fill color for the SVG icon */
+    transition: fill 0.3s; /* Smooth transition for fill color change */
+}
+button:hover svg {
+    fill: var(--hovered-text-color); /* Change fill color on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+/* button erase white background */
+button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    outline: none; /* Remove outline */
+    position: absolute;
+    right: 5px;
+}
+/* under line when hover links  */
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+    text-decoration-color: var(--hovered-text-color); /* Underline color */
+    text-decoration-thickness: 3px; /* Thickness of the underline */
+    text-underline-offset: 4px; /* Offset of the underline */
+}
+/* search bar inside text to white */
+.search-bar input[type="text"]::placeholder {
+    color: white; /* Placeholder text color */
+    opacity: 0.7; /* Opacity of the placeholder text */
+    font-family: var(--main-font-family);
+}
+.favorite-icon {
+    position: absolute;
+    top: 35px; /* Position the favorite icon at the top */
+    right: 40px; /* Position it to the right */
+    font-size: 30px; /* Font size for the favorite icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+.favorite-icon:hover {
+    color: var(--hovered-text-color); /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    filter: brightness(1.5); /* Increase brightness of the icon on hover */
+}
+.fav-icon {
+    fill: var(--small-text-color); /* Set the fill color for the SVG path */
+    transition: fill 0.3s; /* Smooth transition for fill color change */
+}
+/* --responsive navbar-- */
+@media screen and (max-width: 1000px) {
+    .logo > a > img {
+        width: 120px; /* Adjust logo size for smaller screens */
+        top: -5px; /* Adjust position for smaller screens */
+        left: 50px; /* Adjust position for smaller screens */
+    }
+    .search-bar {
+    position: absolute;
+    top: 35px; /* Position the search bar at the top */
+    right: 100px;
+}
+.favorite-icon {
+    position: absolute;
+    top: 33px; /* Position the favorite icon at the top */
+    right: 10px; /* Position it to the right */
+    font-size: 30px; /* Font size for the favorite icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+.cart-icon {
+    position: absolute;
+    top: 30px; /* Position the cart icon at the top */
+    right: 55px; /* Position it to the right */
+    font-size: 30px; /* Font size for the cart icon */
+    color: var(--small-text-color); /* Set the cart icon color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+}

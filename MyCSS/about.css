@@ -1,0 +1,121 @@
+:root {
+    --main-bg-color: #fefff2; /* Light yellow background color */
+    --linear-gradient: #bca28d; /* Gradient pattern */
+    --linear-gradient-2: #d0bbab; /* Lighter gradient color */
+    --linear-gradient-3: #f8e9c5; /* Even lighter gradient color */
+    --small-text-color: #755217;   /* Dark text color for contrast */
+    --title-text-color: #cf8732; /* Title text color */
+    --hovered-text-color: #ed8813; /* Hovered text color */
+    --main-font-family: Arial, sans-serif; /* Font family */
+    --main-font-size: 16px;    /* Base font size */
+    --footer-font-family: "Smooch Sans", sans-serif;
+}
+body {
+  /* background-color: var(--main-bg-color); */
+  background-image: linear-gradient(to top left, #fefff2, 40%, #f8e9c5, 20%, #f8e9c5, 60%, #fefff2, 30%, #fefff2, 30%, #fefff2);
+  background-attachment: relative; /* Fix the background image during scroll */
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size); /* Set the base font size */
+  color: var(--small-text-color); /* Set the text color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150vh;
+  text-align: center;
+  font-size: 30px;
+}
+
+.container p {
+  font-size: 20px; /* Set the font size for the paragraph */
+  color: var(--small-text-color); /* Set the paragraph text color */
+  margin: 10px 0; /* Add some margin around the paragraph */
+  text-shadow: 2px 1px 6px rgba(255, 255, 255, 0.347);
+}
+.text-1 {
+    width: 300px;
+    text-align: start;    
+    position: absolute;
+    top: 150px;
+    left: 200px;
+}
+.text-1 p {
+  font-size: 25px;
+    width: 450px;
+}
+.text-1 h4 {
+    width: 500px;
+    font-size: 40px;
+    color: var(--title-text-color);
+    margin-bottom: 10px;
+}
+.text-2 {
+    width: 300px;
+    text-align: start;    
+    position: absolute;
+    bottom: 180px;
+    right: 550px;
+}
+.text-2 p {
+  font-size: 25px;
+    width: 450px;
+}
+.text-2 h4 {
+    width: 500px;
+    font-size: 40px;
+    color: var(--title-text-color);
+    margin-bottom: 10px;
+}
+.text-2:hover {
+  color: var(--hovered-text-color);
+  transform: scale(1.1);
+  transition: filter 1.3s, transform 1.3s;
+}
+.text-1:hover {
+  color: var(--hovered-text-color);
+  transform: scale(1.1);
+  transition: filter 1.3s, transform 1.3s;
+}
+.myimage img {
+  position: absolute; 
+  
+}
+.img-1 img {
+  top: 70px;
+  right: 550px;
+}
+.img-2 img {
+  top: 350px;
+  left: 200px;
+}
+.img-3 img {
+  width: 500px;
+  top: 300px;
+  right: 50px;
+}
+img:hover {
+  transform: scale(1.1);
+  transition: filter 0.3s, transform 0.9s ;
+}
+.mybtn {
+  color: var(--small-text-color);
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  bottom: 70px;
+  right: 50%;
+  border: 1px solid var(--main-bg-color);
+}
+.mybtn:hover {
+  background-color: var(--linear-gradient-3);
+  color: var(--hovered-text-color);
+  border: 1px solid var(--main-bg-color);
+}

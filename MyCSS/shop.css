@@ -1,0 +1,138 @@
+:root {
+    --main-bg-color: #fefff2; /* Light yellow background color */
+    --linear-gradient: #bca28d; /* Gradient pattern */
+    --linear-gradient-2: #d0bbab; /* Lighter gradient color */
+    --linear-gradient-3: #f8e9c5; /* Even lighter gradient color */
+    --small-text-color: #755217;   /* Dark text color for contrast */
+    --title-text-color: #cf8732; /* Title text color */
+    --hovered-text-color: #ed8813; /* Hovered text color */
+    --main-font-family: Arial, sans-serif; /* Font family */
+    --main-font-size: 16px;    /* Base font size */
+    --footer-font-family: "Smooch Sans", sans-serif;
+}
+body {
+  background-color: var(--main-bg-color);
+  background-attachment: relative; /* Fix the background image during scroll */
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size); /* Set the base font size */
+  color: var(--small-text-color); /* Set the text color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow-x: hidden;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  text-align: center;
+  font-size: 30px;
+}
+.container p {
+  font-size: 20px; /* Set the font size for the paragraph */
+  color: var(--small-text-color); /* Set the paragraph text color */
+  margin: 10px 0; /* Add some margin around the paragraph */
+  text-shadow: 2px 1px 6px rgba(255, 255, 255, 0.347);
+}
+.title {
+    font-size: 50px; /* Set the font size for the heading */
+    color: var(--title-text-color); /* Set the heading text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow effect to the heading text */
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    translate: -50%;
+}
+.top {
+    border-bottom: 2px solid var(--small-text-color);
+    width: 90%;
+    margin-bottom: 330px;
+}
+.result {
+    position: absolute;
+    top: 174px;
+    left: 20px;
+}
+.card-sort > select {
+    font-family: var(--main-font-family);
+    font-size: 25px;
+    color: var(--small-text-color);
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    position: absolute;
+    top: 210px;
+    right: -60px;
+}
+.card-sort > select > option {
+    background-color: rgba(186, 183, 183, 0.549);
+    border: none;
+    filter: blur(5px);
+}
+/* using gride with responsive card */
+
+.grid-container {
+    max-width: 1000px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    overflow-x: hidden;
+}
+
+.grid-item {
+    background-color: rgba(215, 215, 215, 0.8);
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+.grid-item:hover {
+    transform: scale(1.1);
+}
+.grid-container .btn-area {
+    display: block;
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 900;
+    width: 180px;
+    line-height: 50px;
+    margin: 50px auto 0;
+    border-radius: 50px;
+}
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s; /* Smooth transition for image scaling */
+}
+.grid-container .btn-area .btn2 {
+    display: none;
+}
+.grid-container #btnBox {
+    display: none;
+}
+.grid-item h3 {
+    font-size: 20px; /* Set the font size for the heading */
+    color: var(--title-text-color); /* Set the heading text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow effect to the heading text */
+    margin-bottom: 10px; /* Add some margin below the heading */
+}
+.grid-item a {
+    color: white; /* Set the link color */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s; /* Smooth transition for color change */
+    background-color: #755217;
+    padding: 5px 10px; /* Add padding around the link */
+    border-radius: 5px; /* Rounded corners for the link */
+}
+.grid-item a:hover {
+    color: var(--hovered-text-color); /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+    transform: scale(1.1); /* Slightly enlarge the link on hover */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}

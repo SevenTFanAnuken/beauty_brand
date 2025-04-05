@@ -1,0 +1,66 @@
+:root {
+    --main-bg-color: #fefff2; /* Light yellow background color */
+    --linear-gradient: #bca28d; /* Gradient pattern */
+    --linear-gradient-2: #d0bbab; /* Lighter gradient color */
+    --linear-gradient-3: #f8e9c5; /* Even lighter gradient color */
+    --small-text-color: #755217;   /* Dark text color for contrast */
+    --title-text-color: #cf8732; /* Title text color */
+    --hovered-text-color: #ed8813; /* Hovered text color */
+    --main-font-size: 16px;    /* Base font size */
+    --footer-font-family: "Smooch Sans", sans-serif;
+}
+
+.footer {
+    background-color: var(--linear-gradient-3); /* Set the background color */
+    color: var(--small-text-color); /* Set the text color */
+    font-family: var(--footer-font-family); /* Set the font family */
+    font-size: 14px; /* Set the font size */
+    padding: 20px; /* Add padding around the footer */
+    text-align: center; /* Center the text in the footer */
+    position: relative; /* Fix the footer at the bottom of the page */
+    bottom: 0; /* Position it at the bottom */
+    width: 100%; /* Full width of the viewport */
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid lightgoldenrodyellow;
+}
+
+.footer a {
+    color: inherit; /* Inherit the link color */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+.footer a:hover {
+    color: var(--hovered-text-color); /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.quick-link ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+.social-link ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+.footer > div > h2 > svg path {
+    fill: var(--small-text-color); /* Set the fill color for icons */
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack the footer vertically on smaller screens */
+    }
+    .quick-link, .social-link {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .footer {
+        flex-direction: row; /* Stack the footer horizontally on larger screens */
+    }
+}
